@@ -1,0 +1,3 @@
+const useYarn = require('.')
+
+useYarn()
