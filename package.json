@@ -1,16 +1,16 @@
 {
   "name": "use-yarn",
   "version": "1.0.0",
-  "description": "",
+  "description": "Force users to use yarn instead of npm.",
   "main": "index.js",
   "bin": {
     "use-yarn": "cli.js"
   },
   "scripts": {
     "try": "node cli.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node cli.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "AndersDJohnson/use-yarn",
   "author": "Anders D. Johnson",
   "license": "ISC",
   "dependencies": {
