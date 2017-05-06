@@ -12,7 +12,7 @@ yarn add use-yarn
 ## Use
 ### CLI
 For example, in your `package.json`:
-```
+```json
 {
   "scripts": {
      "preinstall": "use-yarn"
