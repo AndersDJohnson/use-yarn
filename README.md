@@ -28,3 +28,7 @@ useYarn()
 // or a custom message
 useYarn('You idiot!')
 ```
+
+## Etc.
+
+If you want to catch missed updates to `yarn.lock` on CI, try [danger-yarn-lock](https://github.com/AndersDJohnson/danger-yarn-lock).
