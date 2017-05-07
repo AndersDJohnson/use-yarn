@@ -4,6 +4,8 @@
 If run from npm instead of yarn, the process will exit with error code `1`
 and print [this error message](https://raw.githubusercontent.com/adjohnson916/use-yarn/master/message.txt).
 
+Note: this will not work if the user uses `npm install --ignore-scripts`.
+
 ## Install
 ```
 yarn add use-yarn
