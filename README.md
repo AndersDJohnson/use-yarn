@@ -1,27 +1,41 @@
 # use-yarn
-> Force users to use yarn instead of npm.
+> Force users to use `yarn` instead of `npm`.
 
-If run from npm instead of yarn, the process will exit with error code `1`
-and print [this error message](https://raw.githubusercontent.com/AndersDJohnson/use-yarn/master/message.txt).
+If run from `npm` instead of `yarn`, the process will exit with error code `1`
+and print an [error message](https://raw.githubusercontent.com/AndersDJohnson/use-yarn/master/message.txt).
 
-Note: this will not work if the user uses `npm install --ignore-scripts`.
+Note: this will not work if used with `npm install --ignore-scripts`.
 
 ## Install
+
 ```
-yarn add use-yarn
+yarn add -D use-yarn
 ```
 
 ## Use
+
 ### CLI
+
 For example, in your `package.json`:
 ```json
 {
   "scripts": {
-     "preinstall": "use-yarn"
+     "preinstall": "npm install --no-scripts use-yarn && use-yarn"
   }
 }
 ```
-### JS
+
+Or if you're on `npm >=5` or have [`npx`][npx]:
+```json
+{
+  "scripts": {
+     "preinstall": "npx use-yarn"
+  }
+}
+```
+
+### API
+
 ```js
 var useYarn = require('use-yarn')
 
@@ -34,3 +48,6 @@ useYarn('You idiot!')
 ## Etc.
 
 If you want to catch missed updates to `yarn.lock` on CI, try [danger-yarn-lock](https://github.com/AndersDJohnson/danger-yarn-lock).
+
+
+[npx]: https://www.npmjs.com/package/npx
