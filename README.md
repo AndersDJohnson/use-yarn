@@ -20,7 +20,7 @@ For example, in your `package.json`:
 ```json
 {
   "scripts": {
-     "preinstall": "npm install --no-scripts use-yarn && use-yarn"
+     "preinstall": "use-yarn || ( npm install --no-scripts --no-save use-yarn && use-yarn )"
   }
 }
 ```
