@@ -6,6 +6,8 @@ and print an [error message](https://raw.githubusercontent.com/adjohnson916/use-
 
 Note: this will not work if used with `npm install --ignore-scripts`.
 
+Note: Use with `>= yarn@1` requires `>= use-yarn@2`.
+
 ## Install
 
 ```
