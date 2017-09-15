@@ -2,6 +2,6 @@
 # yarn lockfile v1
 
 
-is-npm-not-yarn@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/is-npm-not-yarn/-/is-npm-not-yarn-1.0.0.tgz#7406a2d1ef8e8d4caef9b4b10af5c804309db1d8"
+is-npm-not-yarn@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/is-npm-not-yarn/-/is-npm-not-yarn-2.0.0.tgz#52a3a440f7da7b7005af86fef405178ecb80f30d"
