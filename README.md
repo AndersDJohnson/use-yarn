@@ -4,15 +4,14 @@
 If run from `npm` instead of `yarn`, the process will exit with error code `1`
 and print an [error message](https://raw.githubusercontent.com/adjohnson916/use-yarn/master/message.txt).
 
-Note: this will not work if used with `npm install --ignore-scripts`.
+Note: this will not work if used with `npm install --save-dev --ignore-scripts`.
 
 Note: Use with `>= yarn@1` requires `>= use-yarn@2`.
 
 ## Install
 
-```
-yarn add -D use-yarn
-```
+[![npm install --save-dev use-yarn (copy)](https://copyhaste.com/i?t=npm%20install%20--save-dev%20use-yarn)](https://copyhaste.com/c?t=npm%20install%20--save-dev%20use-yarn "npm install --save-dev use-yarn (copy)")
+[![yarn add --dev use-yarn (copy)](https://copyhaste.com/i?t=yarn%20add%20--dev%20use-yarn)](https://copyhaste.com/c?t=yarn%20add%20--dev%20use-yarn "yarn add --dev use-yarn (copy)")
 
 ## Use
 
@@ -22,7 +21,7 @@ For example, in your `package.json`:
 ```json
 {
   "scripts": {
-     "preinstall": "use-yarn || ( npm install --no-scripts --no-save use-yarn && use-yarn )"
+     "preinstall": "use-yarn || ( npm install --save-dev --no-scripts --no-save use-yarn && use-yarn )"
   }
 }
 ```
