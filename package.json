@@ -10,7 +10,7 @@
     "try": "node cli.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "adjohnson916/use-yarn",
+  "repository": "AndersDJohnson/use-yarn",
   "author": "Anders D. Johnson",
   "license": "ISC",
   "dependencies": {
