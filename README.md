@@ -35,6 +35,15 @@ Or if you're on `npm >=5` or have [`npx`][npx]:
 }
 ```
 
+You may disable use-yarn by setting the `DISABLE_USE_YARN` environment variable to `true`:
+```
+{
+  "scripts": {
+     "preinstall": "DISABLE_USE_YARN=true npx use-yarn"
+  }
+}
+```
+
 ### API
 
 ```js
