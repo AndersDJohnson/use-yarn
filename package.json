@@ -14,6 +14,7 @@
   "author": "Anders D. Johnson",
   "license": "ISC",
   "dependencies": {
-    "is-npm-not-yarn": "^2.0.3"
+    "is-npm-not-yarn": "^2.0.3",
+    "minimist": "^1.2.0"
   }
 }
