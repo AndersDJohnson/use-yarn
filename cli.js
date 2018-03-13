@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
-const useYarn = require('.')
+var fs = require('fs')
+var path = require('path')
+var useYarn = require('.')
 
-useYarn()
+var message = fs.readFileSync(path.resolve(__dirname, 'message.txt'), 'utf8')
+
+useYarn(message)
