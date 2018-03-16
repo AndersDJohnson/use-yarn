@@ -8,14 +8,8 @@ var useYarn = require('.')
 var message
 if (argv.f) {
   message = fs.readFileSync(argv.f, 'utf8')
-}
-
-if (!message && argv.m) {
+} else if (argv.m) {
   message = argv.m
-}
-
-if (!message) {
-  message = fs.readFileSync(path.resolve(__dirname, 'message.txt'), 'utf8')
 }
 
 useYarn(message)
