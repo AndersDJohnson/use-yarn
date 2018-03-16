@@ -44,7 +44,7 @@ You may provide a custom message via the `-m` flag:
 }
 ```
 
-Or, you may also provide a custom message read from a file via the `-f` flage:
+Or, you may also provide a custom message read from a file via the `-f` flag:
 ```
 {
   "scripts": {
