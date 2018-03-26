@@ -35,6 +35,24 @@ Or if you're on `npm >=5` or have [`npx`][npx]:
 }
 ```
 
+You may provide a custom message via the `-m` flag:
+```
+{
+  "scripts": {
+     "preinstall": "npx use-yarn -m 'Please use yarn!'"
+  }
+}
+```
+
+Or, you may also provide a custom message read from a file via the `-f` flag:
+```
+{
+  "scripts": {
+     "preinstall": "npx use-yarn -f path/to/customMessage.txt"
+  }
+}
+```
+
 You may disable use-yarn by setting the `DISABLE_USE_YARN` environment variable to `true`:
 ```
 {
