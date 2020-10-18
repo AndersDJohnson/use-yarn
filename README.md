@@ -10,4 +10,4 @@ Note: this will not work if used with `npm install --save-dev --ignore-scripts`.
 
 Note: Use with `>= yarn@1` requires `>= use-yarn@2`.
 
-See docs at: https://andersdjohnson.com/code/use-yarn/
+See docs at: https://andersdjohnson.github.io/use-yarn/
