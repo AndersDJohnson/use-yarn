@@ -5,3 +5,5 @@ andersdjohnson:
   google_analytics: "G-GKW4WE5K60"
   # Show badges for npm
   npm_name: use-yarn
+  # Should install as dev dependency.
+  npm_dev: true
