@@ -41,7 +41,7 @@ You may provide a custom message via the `-m` flag:
 ```json
 {
   "scripts": {
-    "preinstall": "npx use-yarn -m 'Please use yarn!' $npm_execpath"
+    "preinstall": "npx use-yarn $npm_execpath -m 'Please use yarn!'"
   }
 }
 ```
@@ -51,7 +51,7 @@ Or, you may also provide a custom message read from a file via the `-f` flag:
 ```json
 {
   "scripts": {
-    "preinstall": "npx use-yarn -f path/to/customMessage.txt $npm_execpath"
+    "preinstall": "npx use-yarn $npm_execpath -f path/to/customMessage.txt"
   }
 }
 ```
