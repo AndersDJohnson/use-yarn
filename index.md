@@ -17,37 +17,41 @@ Note: Use with `>= yarn@1` requires `>= use-yarn@2`.
 ### CLI
 
 For example, in your `package.json`:
+
 ```json
 {
   "scripts": {
-     "preinstall": "use-yarn || ( npm install --save-dev --no-scripts --no-save use-yarn && use-yarn )"
+    "preinstall": "use-yarn || ( npm install --no-scripts --no-save use-yarn && use-yarn )"
   }
 }
 ```
 
-Or if you're on `npm >=5` or have [`npx`][npx]:
+Or if you're on `npm >=5` or have [`npx`][npx], you can run it by passing `$npm_execpath` value in as standard input:
+
 ```json
 {
   "scripts": {
-     "preinstall": "npx use-yarn"
+    "preinstall": "echo $npm_execpath | npx use-yarn"
   }
 }
 ```
 
 You may provide a custom message via the `-m` flag:
+
 ```json
 {
   "scripts": {
-     "preinstall": "npx use-yarn -m 'Please use yarn!'"
+    "preinstall": "echo $npm_execpath | npx use-yarn -m 'Please use yarn!'"
   }
 }
 ```
 
 Or, you may also provide a custom message read from a file via the `-f` flag:
+
 ```json
 {
   "scripts": {
-     "preinstall": "npx use-yarn -f path/to/customMessage.txt"
+    "preinstall": "echo $npm_execpath | npx use-yarn -f path/to/customMessage.txt"
   }
 }
 ```
@@ -57,17 +61,16 @@ You may disable `use-yarn` by setting the `DISABLE_USE_YARN` environment variabl
 ### API
 
 ```js
-var useYarn = require('use-yarn')
+var useYarn = require("use-yarn");
 
-useYarn()
+useYarn();
 
-// or a custom message
-useYarn('You idiot!')
+// or a custom message:
+useYarn({ message: "We like npm!" });
 ```
 
 ## Etc.
 
 If you want to catch missed updates to `yarn.lock` on CI, try [danger-yarn-lock](https://github.com/AndersDJohnson/danger-yarn-lock).
-
 
 [npx]: https://www.npmjs.com/package/npx
