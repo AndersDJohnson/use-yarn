@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 var fs = require("fs");
-var path = require("path");
 var argv = require("minimist")(process.argv.slice(2));
 var useYarn = require(".");
 
@@ -11,10 +10,14 @@ if (argv.v || argv.version) {
 }
 
 var message;
-if (argv.f) {
-  message = fs.readFileSync(argv.f, "utf8");
-} else if (argv.m) {
-  message = argv.m;
+
+const fileArg = argv.f || argv.file;
+const messageArg = argv.m || argv.message;
+
+if (fileArg) {
+  message = fs.readFileSync(fileArg, "utf8");
+} else if (messageArg) {
+  message = messageArg;
 }
 
 if (process.stdin.isTTY) {
