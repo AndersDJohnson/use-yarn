@@ -34,8 +34,6 @@ if (process.stdin.isTTY) {
 
     if (buffer) {
       useYarn({ message, npm_execpath: buffer });
-    } else {
-      useYarn({ message });
     }
   });
 }
