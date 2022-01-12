@@ -6,6 +6,11 @@
   "bin": {
     "use-yarn": "cli.js"
   },
+  "files": [
+    "index.md",
+    "*.js",
+    "message.txt"
+  ],
   "scripts": {
     "try": "node cli.js",
     "try-stdin": "echo $npm_execpath | node cli.js",
