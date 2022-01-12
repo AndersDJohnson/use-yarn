@@ -8,13 +8,13 @@
   },
   "scripts": {
     "try": "node cli.js",
+    "try-stdin": "echo $npm_execpath | node cli.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "AndersDJohnson/use-yarn",
   "author": "Anders D. Johnson",
   "license": "ISC",
   "dependencies": {
-    "is-npm-not-yarn": "^2.0.3",
     "minimist": "^1.2.0"
   }
 }
