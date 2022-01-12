@@ -5,6 +5,11 @@ var path = require("path");
 var argv = require("minimist")(process.argv.slice(2));
 var useYarn = require(".");
 
+if (argv.v || argv.version) {
+  console.log(require("./package.json").version);
+  process.exit();
+}
+
 var message;
 if (argv.f) {
   message = fs.readFileSync(argv.f, "utf8");
