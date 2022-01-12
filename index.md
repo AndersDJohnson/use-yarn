@@ -26,12 +26,12 @@ For example, in your `package.json`:
 }
 ```
 
-Or if you're on `npm >=5` or have [`npx`][npx], you can run it by passing `$npm_execpath` value in as standard input:
+Or if you're on `npm >=5` or have [`npx`][npx], you can run it by passing `$npm_execpath`:
 
 ```json
 {
   "scripts": {
-    "preinstall": "echo $npm_execpath | npx use-yarn"
+    "preinstall": "npx use-yarn $npm_execpath"
   }
 }
 ```
@@ -41,7 +41,7 @@ You may provide a custom message via the `-m` flag:
 ```json
 {
   "scripts": {
-    "preinstall": "echo $npm_execpath | npx use-yarn -m 'Please use yarn!'"
+    "preinstall": "npx use-yarn -m 'Please use yarn!' $npm_execpath"
   }
 }
 ```
@@ -51,7 +51,7 @@ Or, you may also provide a custom message read from a file via the `-f` flag:
 ```json
 {
   "scripts": {
-    "preinstall": "echo $npm_execpath | npx use-yarn -f path/to/customMessage.txt"
+    "preinstall": "npx use-yarn -f path/to/customMessage.txt $npm_execpath"
   }
 }
 ```

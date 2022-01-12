@@ -9,6 +9,8 @@ if (argv.v || argv.version) {
   process.exit();
 }
 
+const npm_execpath_arg = argv._[0];
+
 var message;
 
 const fileArg = argv.f || argv.file;
@@ -20,8 +22,8 @@ if (fileArg) {
   message = messageArg;
 }
 
-if (process.stdin.isTTY) {
-  useYarn({ message });
+if (process.stdin.isTTY || npm_execpath_arg) {
+  useYarn({ message, npm_execpath: npm_execpath_arg });
 } else {
   process.stdin.on("readable", () => {
     let buffer = "";
