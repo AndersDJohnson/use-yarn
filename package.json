@@ -1,6 +1,6 @@
 {
   "name": "use-yarn",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "description": "Force users to use yarn instead of npm.",
   "main": "index.js",
   "bin": {
